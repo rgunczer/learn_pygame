@@ -20,17 +20,17 @@ YELLOW = (255, 255, 0)
 WHITE = (255, 255, 255)
 
 balls = []
-for x in range(NUMBER_OF_BALLS):
-    balls.append({})
 
 # initialize balls with random values
-for ball in balls:
-    ball['x'] = random.randint(0, WIDTH)
-    ball['y'] = random.randint(0, HEIGHT)
-    ball['radius'] = random.randint(5, 10)
-    ball['dx'] = random.randint(1, 3)
-    ball['dy'] = random.randint(1, 3)
-    ball['speed'] = random.uniform(0.02, 0.06)
+for x in range(NUMBER_OF_BALLS):
+    balls.append({
+        'x': random.randint(0, WIDTH),
+        'y': random.randint(0, HEIGHT),
+        'radius': random.randint(5, 10),
+        'dx': random.randint(1, 3),
+        'dy': random.randint(1, 3),
+        'speed': random.uniform(0.02, 0.06),
+    })
 
 # debug print initialized values
 for ball in balls:
